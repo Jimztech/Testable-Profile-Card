@@ -1,0 +1,23 @@
+:root {
+    --light-green: hsl(75, 94%, 57%);
+    --light-grey: hsl(0, 0%, 20%);
+    --medium-grey: hsl(0, 0%, 12%);
+    --dark-grey: hsl(0, 0%, 8%);
+    --white: hsl(0, 0%, 100%);
+}
+body {
+    background-color: var(--dark-grey);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--medium-grey);
+    border: 2px solid white;
+    padding: 1rem;
+}
