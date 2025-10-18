@@ -18,6 +18,54 @@ body {
 
 .container {
     background-color: var(--medium-grey);
-    border: 2px solid white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+}
+header > h1 {
+    font-weight: 500;
+}
+header > p {
+    color: var(--light-green);
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.hobbies, .links, .dislike {
+    list-style: none;
+}
+.hobbies > li > p, .dislike > li {
+    text-align: left;
+}
+.links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+}
+.links > li {
+    padding: 0.8rem 5rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    background-color: var(--light-grey);
+}
+
+.hobbies-container, .dislike-container {
     padding: 1rem;
+}
+.hobbies-container > p, .dislike-container > p {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .container {
+        margin: 5rem;
+    }
 }

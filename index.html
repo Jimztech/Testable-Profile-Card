@@ -20,44 +20,51 @@
 
 </head>
 <body>
-  <article class="container">
+  <article class="container" data-testid="test-profile-card">
     <figure>
       <img 
-        src="./assets/images/avatar-james.jpg" 
+        src="./assets/images/avatar-james-2.jpg" 
         alt="user avatar"
         width="100"
         height="100"
+        class="avatar"
+        data-testid="test-user-avatar"
       >
     </figure>
 
     <header>
-      <h1>James Ibezim</h1>
-      <p>"Front-end developer and avid reader."</p>
+      <h1 data-testid="test-user-name">James Ibezim</h1>
+      <p class="time" data-testid="test-user-time"></p>
     </header>
 
-    <!-- Current time -->
-    10:25pm WAT
+    <p class="bio" data-testid="test-user-bio">"Front-end developer and avid reader."</p>
 
-    <!-- Hobbies -->
     <section>
-      <ul>
-        <li>Singing</li>
-        <li>Studying</li>
-      </ul>
+      <!-- Hobbies -->
+      <div class="hobbies-container">
+        <p class="hobbies-title">Hobbies</p>
+        <ul class="hobbies">
+          <li data-testid="test-user-hobbies"><p>Singing and Running</p></li>
+        </ul>
+      </div>
 
       <!-- Dislikes -->
-      <ul>
-        <li>Proud and Arrogant people</li>
+      <div class="dislike-container">
+        <p>Dislikes</p>
+        <ul class="dislike">
+          <li data-testid="test-user-dislikes">Proud and Arrogant people</li>
+        </ul>
+      </div>
+
+      <!-- Links -->
+      <ul class="links" data-testid="test-user-social-links">
+        <li><a href="https://github.com/Jimztech" target="_blank">GitHub</a></li>
+        <li><a href="https://x.com/Engr_Jamie" target="_blank">Twitter</a></li>
+        <li><a href="https://tiktok.com/@engr_jamie" target="_blank">Tiktok</a></li>
       </ul>
 
     </section>
-    <!-- Links -->
-    <ul>
-      <li>GitHub</li>
-      <li>Frontend Mentor</li>
-      <li>Twitter</li>
-      <li>Tiktok</li>
-    </ul>
+
   </article>
 
   <script src="./index.js"></script>
