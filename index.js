@@ -5,6 +5,7 @@ function updateTime() {
     // Get hours and minutes
     let hours = now.getHours();
     const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
     
     // Determine AM/PM
     const ampm = hours >= 12 ? 'pm' : 'am';
@@ -17,11 +18,11 @@ function updateTime() {
     const minutesStr = minutes < 10 ? '0' + minutes : minutes;
     
     // Update the element
-    timeElement.textContent = `${hours}:${minutesStr}${ampm} WAT`;
+    timeElement.textContent = `${hours}:${minutesStr}:${seconds}${ampm} WAT`;
 }
 
 // Update time immediately
 updateTime();
 
 // Update every minute (60000 milliseconds)
-setInterval(updateTime, 60000);
+setInterval(updateTime, 1000);
