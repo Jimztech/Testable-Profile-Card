@@ -117,3 +117,62 @@ form.addEventListener('submit', (e) => {
     alert('Form submitted successfully!');
   }
 });
+
+
+//Navigation
+// Get all sections
+const articleSection = document.querySelector('.container');
+const contactPage = document.querySelector('.contact-page');
+const aboutPage = document.querySelector('[data-testid="test-about-page"]');
+
+// Get navigation links
+const contactLink = document.querySelector('a[href="#contact us"]');
+const aboutLink = document.querySelector('a[href="#about me"]');
+
+// Get back buttons
+const contactBackButton = document.querySelector('.contact-page .back-button span');
+const aboutBackButton = document.querySelector('[data-testid="test-about-page"] > span');
+
+// Function to show a specific section and hide others
+function showSection(sectionToShow) {
+  // Hide all sections
+  articleSection.style.display = 'none';
+  contactPage.style.display = 'none';
+  aboutPage.style.display = 'none';
+  
+  // Show the selected section
+  sectionToShow.style.display = 'block';
+  
+  // Scroll to top of page
+  window.scrollTo(0, 0);
+}
+
+// Initialize: Show only the article section on page load
+function initializePage() {
+  showSection(articleSection);
+}
+
+// Navigate to Contact Us page
+contactLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  showSection(contactPage);
+});
+
+// Navigate to About Me page
+aboutLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  showSection(aboutPage);
+});
+
+// Back to home from Contact page
+contactBackButton.addEventListener('click', () => {
+  showSection(articleSection);
+});
+
+// Back to home from About page
+aboutBackButton.addEventListener('click', () => {
+  showSection(articleSection);
+});
+
+// Initialize the page
+initializePage();
