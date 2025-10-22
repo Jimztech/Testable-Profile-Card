@@ -57,16 +57,124 @@
       </div>
 
       <!-- Links -->
-      <ul class="links" data-testid="test-user-social-links">
-        <li><a href="https://github.com/Jimztech" target="_blank">GitHub</a></li>
-        <li><a href="https://x.com/Engr_Jamie" target="_blank">Twitter</a></li>
-        <li><a href="https://tiktok.com/@engr_jamie" target="_blank">Tiktok</a></li>
-      </ul>
+      <div class="links">
+        <ul class="test-links" data-testid="test-user-social-links">
+          <li><a href="https://github.com/Jimztech" target="_blank">GitHub</a></li>
+          <li><a href="https://x.com/Engr_Jamie" target="_blank">Twitter</a></li>
+          <li><a href="https://tiktok.com/@engr_jamie" target="_blank">Tiktok</a></li>
+        </ul>
+      </div>
+
+      <!-- 2nd Links -->
+      <div class="second-links">
+        <ul class="test-links">
+          <li><a href="#contact us">Contact Us</a></li>
+          <li><a href="#about me">About Me</a></li>
+        </ul>
+      </div>
 
     </section>
 
   </article>
 
+  <!--Contact Us Page-->
+  <section class="contact-page">
+    <div class="back-button">
+      <span><- Back to Home</span>
+    </div>
+
+    <h1 class="contact-header">Get in Touch</h1>
+    <p class="contact-text">
+      Have a question or want to work together? Send me a message!
+    </p>
+
+    <form action="">
+      <span class="name-error" data-testid="test-contact-error-fullname"></span>
+      <label for="fname">Full Name</label>
+      <input type="text" id="fname" name="fullname" placeholder="John Doe" data-testid="test-contact-name">
+
+      <span class="email-error" data-testid="test-contact-error-email"></span>
+      <label for="email">Email</label>
+      <input type="email" placeholder="Enter your email" data-testid="test-contact-email">
+
+      <label for="">Subject</label>
+      <input type="text" placeholder="Enter subject or title" data-testid="test-contact-subject">
+
+      <label for="message">Message</label>
+      <textarea name="" id="" data-testid="test-contact-message"></textarea>
+
+      <div class="button-container">
+        <button type="submit" class="submit" data-testid="test-contact-submit">Send Message</button>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- About Me -->
+  <main data-testid="test-about-page">
+    <span><- Back to Home</span>
+
+    <section class="main-content">
+      <!-- Bio -->
+      <div class="bio-content" data-testid="test-about-bio">
+        <h1>About Me</h1>
+        <span>Reflections on my journey</span>
+
+        <p>
+          I'm James Chiagozie Ibezim, a 22-year-old full-stack web developer passionate about 
+          solving real-world problems with technology. 
+          I started coding by experimenting with electronics and gradually shifted to building software. 
+          My dream is to become one of the best frontend developers in the world, 
+          and I'm currently improving my skills in HTML, CSS, and JavaScript while building projects from Frontend Mentor and W3Schools.
+          Currently I intern with HNG.
+        </p>
+      </div>
+
+      <!-- Goals in this program -->
+      <div class="goals" data-testid="test-about-goals">
+        <p>
+          Improve my frontend development skills through real projects.
+        </p>
+        <p>
+          Learn how to collaborate effectively in a tech team.
+        </p>
+        <p>
+          Build a portfolio-worthy project by the end of the program.
+        </p>
+      </div>
+
+      <!-- Areas of low confidence-->
+      <div class="low-confidence" data-testid="test-about-confidence">
+        <h2>Area of Low confidence</h2>
+        <p>
+          I sometimes struggle with confidence when working on unfamiliar tasks or presenting my ideas to others. 
+          I also tend to overthink my abilities compared to more experienced developers. However, 
+          I’m actively improving by practicing more, seeking feedback, 
+          and taking on challenges that push me out of my comfort zone.
+        </p>
+      </div>
+
+      <!-- Note to Future self -->
+      <div class="note" data-testid="test-about-future-note">
+        <p class="note-header">
+          Note to My Future Self:
+        </p>
+
+        <p>
+          Keep going, no matter how tough it gets. Remember where you started, 
+          the nights you coded through power cuts, the times you doubted yourself but still showed up. 
+          You’ve come far, and you’ll go even farther. 
+          Stay hungry, stay focused, and never forget why you began: to change your life, 
+          take care of your family, and build things that matter.
+        </p>
+      </div>
+
+      <!-- Extra thoughts -->
+      <div data-testid="test-about-extra">
+        <p>Keep believing in yourself, every small step is building the future you dream of.</p>
+      </div>
+    </section>
+  </main>
   <script src="./index.js"></script>
 </body>
 </html>
