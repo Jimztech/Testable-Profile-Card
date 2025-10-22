@@ -126,7 +126,7 @@ form.addEventListener('submit', (e) => {
     // Hide success message after 3 seconds
     setTimeout(() => {
       successAlert.style.display = 'none';
-      form.reset(); // Optional: reset form after submission
+      form.reset();
     }, 3000);
   }
 });
