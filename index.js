@@ -34,6 +34,7 @@ const nameInput = document.querySelector('[data-testid="test-contact-name"]');
 const emailInput = document.querySelector('[data-testid="test-contact-email"]');
 const nameError = document.querySelector('[data-testid="test-contact-error-fullname"]');
 const emailError = document.querySelector('[data-testid="test-contact-error-email"]');
+const successAlert = document.querySelector('[data-testid="test-contact-success"]');
 
 // Validation functions
 function validateName(name) {
@@ -113,8 +114,20 @@ form.addEventListener('submit', (e) => {
   // If no errors, submit the form
   if (!nameErrorMsg && !emailErrorMsg) {
     console.log('Form is valid, submitting...');
-    // form.submit(); // Uncomment to actually submit
-    alert('Form submitted successfully!');
+    // Show success message
+    successAlert.style.display = 'block';
+    successAlert.style.color = 'green';
+    successAlert.style.padding = '10px';
+    successAlert.style.marginBottom = '15px';
+    successAlert.style.backgroundColor = '#d4edda';
+    successAlert.style.border = '1px solid #c3e6cb';
+    successAlert.style.borderRadius = '4px';
+    
+    // Hide success message after 3 seconds
+    setTimeout(() => {
+      successAlert.style.display = 'none';
+      form.reset(); // Optional: reset form after submission
+    }, 3000);
   }
 });
 
